@@ -1,0 +1,61 @@
+.navButton:hover {
+    background-color: #0d0d0d !important;
+    color:white;
+}
+.navbarWrapper {
+    background-color:white;
+}
+.navButton {
+    background-color: black !important;
+    color:white;
+}
+.navButtonX {
+    color:white;
+    padding: 10px;
+}
+.navButtonLogout {
+    background-color: red !important;
+    color:white;
+    padding: 10px;
+}
+.nameTag {
+    background-color: #4CAF50  !important;
+    color:white;
+    padding: 10px;
+}
+.sidenav {
+    transform: translateX(0%); !important;
+}
+.brandTag {
+    padding-left: 32px;
+}
+.sidenavHeading {
+    padding-left: 32px;
+}
+#loginPanel {
+    text-align:center;
+}
+#loginPanelWrapper {
+    min-width: 200px;
+    max-width: 500px;
+}
+#startpage {
+    background-image: url("../../../../images/startpage1.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.dropdown-content li > a, .dropdown-content li > span {
+    font-size: 16px;
+    color: black;
+    display: block;
+    line-height: 22px;
+    padding: 14px 16px;
+}
+nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color:black;
+}
+#loggedInText {
+    padding-right:5px;
+}

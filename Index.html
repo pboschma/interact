@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InterAct</title>
+    <script src="assets/js/jQuery/jquery.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/materialize/css/materialize.css">
+    <script src="assets/styles/materialize/js/materialize.js"></script>
+    <link rel="stylesheet" href="assets/styles/custom/css/menu.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<header>
+    <nav>
+        <div class="nav-wrapper navbarWrapper">
+            <div class="row">
+                <div class="col s12 navbarContent" style="text-align:right">
+                    <span id="loggedInText" class="grey-text hide-on-med-and-up left">Hi, Jan-Lukas</span>
+                    <span class="nameTag">Jonas Kruse</span>
+                    <!-- Dropdown Trigger -->
+
+                    <!-- Dropdown Structure -->
+                    <ul id='contacts' class='dropdown-content'>
+                        <li class=dropdownEntry""><a href="#">Jan-Lukas Müller</a></li>
+                        <li class="dropdownEntry"><a href="#">Jonas Kruse</a></li>
+                        <li class="dropdownEntry"><a href="#">Maik Lindemann</a></li>
+                        <li class="dropdownEntry"><a href="#">Pascal Boschma</a></li>
+                    </ul>
+                    <a id="searchModalTrigger" href="#searchContactsModal" class="navButtonX modal-trigger black hide-on-med-and-down">Kontakte +</a>
+                    <a id="favoritesModalTrigger" href="#searchContactsModal" class="navButtonX modal-trigger black hide-on-med-and-down">Favoriten</a>
+                    <a id="profileModalTrigger" href="#searchContactsModal" class="navButtonX modal-trigger black hide-on-med-and-down">Profil</a>
+                    <a id="themesModalTrigger" href="#searchContactsModal" class="navButtonX modal-trigger black hide-on-med-and-down">Themes</a>
+                    <a class='dropdown-trigger navButtonX black hide-on-large-only' href='#' data-target='contacts'>Letzte Chats</a>
+                    <a id="logoutButton" href="#searchContactsModal" class="navButtonX modal-trigger black hide-on-med-and-down">Logout</a>
+                    <div class="modal" id="searchContactsModal">
+                        <h5>Nach Kontakten suchen</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+<!-- LEFT SIDEBAR	 -->
+<ul id="sidenav" class="sidenav hide-on-small-only">
+    <li>
+        <div class="row">
+            <div class="col s12 center">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="images/profile_picture.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="brandTag">
+        <b><span>I N T E R</span><span class="blue-text"> A C T</span></b>
+    </li>
+    <li class="sidenavHeading">
+        <span class="grey-text">Eingeloggt als Jan-Lukas Müller</span>
+    </li>
+    <li class="sidenavHeading hide-on-med-and-down">
+        <span>F A V O R I T E N</span>
+    </li>
+    <li class="hide-on-med-and-down">
+        <a href="#!">[#14235] Jan-Lukas Müller
+            <span class="new badge green" data-badge-caption="+">4</span>
+        </a>
+    </li>
+    <li class="hide-on-med-and-down">
+        <a href="#!">[#14235] Jonas Kruse</a>
+    </li>
+    <li class="hide-on-med-and-down">
+        <a href="#!">[#14235] Maik Lindemann</a>
+    </li>
+    <li class="hide-on-med-and-down">
+        <a href="#!">[#14235] Pascal Boschma</a>
+    </li>
+    <li class="sidenavHeading hide-on-med-and-down">
+        <span>C H A T S</span>
+    </li>
+    <li class="hide-on-med-and-down">
+        <a href="#!">[#14235] Bot Roboter 1</a>
+    </li>
+    <li class="hide-on-med-and-down">
+        <a href="#!">[#14235] Bot Roboter 2</a>
+    </li>
+    <li class="hide-on-med-and-down">
+        <a href="#!">[#14235] Bot Roboter 3</a>
+    </li>
+    <li class="hide-on-med-and-down">
+        <a href="#!">[#14235] Bot Roboter 4</a>
+    </li>
+    <li class="hide-on-med-and-down">
+        <a href="#!">[#14235] Bot Roboter 5</a>
+    </li>
+    <li class="hide-on-large-only">
+        <a href="#!">Kontakte hinzufügen</a>
+    </li>
+    <li class="hide-on-large-only">
+        <a href="#!">Favoriten</a>
+    </li>
+    <li class="hide-on-large-only">
+        <a href="#!">Profil</a>
+    </li>
+    <li class="hide-on-large-only">
+        <a href="#!">Themes</a>
+    </li>
+    <li class="hide-on-large-only">
+        <a href="#!">Logout</a>
+    </li>
+    <li>
+        <div style="margin-bottom:100px"></div>
+    </li>
+</ul>
+</body>
+<script>
+    $(document).ready(function(){
+        $('.dropdown-trigger').dropdown();
+        $('.sidenav').sidenav();
+        $('.modal').modal();
+    });
+</script>
+</html>
