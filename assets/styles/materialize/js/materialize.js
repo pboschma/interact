@@ -2504,7 +2504,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
           // ENTER selects choice on focused item
         } else if (e.which === M.keys.ENTER && this.isOpen) {
-          // Search for <a> and <button>
+          // search for <a> and <button>
           var focusedElement = this.dropdownEl.children[this.focusedIndex];
           var $activatableElement = $(focusedElement).find('a, button').first();
 
