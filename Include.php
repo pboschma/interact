@@ -12,6 +12,7 @@ require_once('assets/constants/Constants.php');
 //base
 require_once('classes/base/Base.php');
 require_once('classes/base/controller/BaseController.php');
+require_once('classes/base/validation/Sanitize.php');
 
 //chat
 require_once('classes/chat/Chat.php');
