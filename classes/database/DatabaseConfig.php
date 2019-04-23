@@ -15,7 +15,7 @@ class DatabaseConfig
 
     public function defineDatabaseConstants() {
         define('SERVER', 'web0106.zxcs.nl');
-        define('USER_NAME', 'u36244p31547_interact@localhost');
+        define('USER_NAME', 'u36244p31547_interact');
         define('PASSWORD', '12345');
         define('DATABASE_NAME', 'u36244p31547_interact');
     }

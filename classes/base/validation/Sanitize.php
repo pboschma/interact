@@ -81,9 +81,7 @@ class Sanitize
      * @param $sql
      * @return string
      */
-    public function sanitizeSql(string $sql) {
-        $database = new Database();
-        $connection = $database->getConnection();
+    public function sanitizeSql($connection, string $sql) {
         $cleanedSql = mysqli_real_escape_string($connection, $sql);
         return $cleanedSql;
     }

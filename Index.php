@@ -12,3 +12,7 @@ $constants = new Constants();
 //bootstrap
 $constants->init();
 $database->buildConnection();
+
+$sql = "SELECT vorname, user_id FROM tbl_user";
+$test = $database->selectScalar($sql);
+var_dump($test);

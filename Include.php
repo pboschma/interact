@@ -1,7 +1,6 @@
 <?php
 //database
 require_once('classes/database/DatabaseConfig.php');
-require_once('classes/database/service/DatabaseService.php');
 require_once('classes/database/Database.php');
 
 //constants
