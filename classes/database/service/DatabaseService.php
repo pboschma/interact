@@ -7,21 +7,9 @@
  */
 namespace classes\database\service;
 
+use classes\database\Database;
+
 class DatabaseService
 {
-    public function selectArray() {
 
-    }
-    public function selectScalar() {
-
-    }
-    public function getColumn() {
-
-    }
-    public function getRow() {
-
-    }
-    public function execute() {
-
-    }
 }
