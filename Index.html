@@ -28,13 +28,143 @@
                         <li class="dropdownEntry"><a href="#">Pascal Boschma</a></li>
                     </ul>
                     <a id="searchModalTrigger" href="#searchContactsModal" class="navButtonX modal-trigger black hide-on-med-and-down">Kontakte +</a>
-                    <a id="favoritesModalTrigger" href="#searchContactsModal" class="navButtonX modal-trigger black hide-on-med-and-down">Favoriten</a>
-                    <a id="profileModalTrigger" href="#searchContactsModal" class="navButtonX modal-trigger black hide-on-med-and-down">Profil</a>
-                    <a id="themesModalTrigger" href="#searchContactsModal" class="navButtonX modal-trigger black hide-on-med-and-down">Themes</a>
+                    <a id="favoritesModalTrigger" href="#favoritesModal" class="navButtonX modal-trigger black hide-on-med-and-down">Favoriten</a>
+                    <a id="profileModalTrigger" href="#profileModal" class="navButtonX modal-trigger black hide-on-med-and-down">Profil</a>
+                    <a id="themesModalTrigger" href="#themesModal" class="navButtonX modal-trigger black hide-on-med-and-down">Themes</a>
                     <a class='dropdown-trigger navButtonX black hide-on-large-only' href='#' data-target='contacts'>Letzte Chats</a>
                     <a id="logoutButton" href="#searchContactsModal" class="navButtonX modal-trigger black hide-on-med-and-down">Logout</a>
-                    <div class="modal" id="searchContactsModal">
-                        <h5>Nach Kontakten suchen</h5>
+                    <div class="modal center" id="searchContactsModal" style="padding: 30px">
+                        <div class="col l12 container">
+                            <b><p class="black-text">nach Kontakten suchen..</p></b>
+                            <div class="input-field col s12 center">
+                                <input placeholder="Suchen..." id="first_name" type="text" class="validate">
+                            </div>
+                            <div class="black-text">
+                                <table>
+                                    <tr>
+                                        <th class="center">Profil</th>
+                                        <th class="center">Code</th>
+                                        <th class="center">Benutzername</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <a href="" class="tooltipped" data-position="bottom" data-tooltip="Profil anzeigen">
+                                                <img style="margin-top:20px " src="images/profile_picture.jpg" width="60px" height="60px">
+                                            </a>
+                                        </td>
+                                        <td class="center">#12353</td>
+                                        <td class="center">nxtSquosh</td>
+                                        <td class="center"><a class="navButtonX black" href="">hinzufügen</a></td>
+                                    </tr>
+                                </table>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal center" id="themesModal" style="padding: 30px">
+                        <div class="col l12 container">
+                            <b><p class="black-text">Themes auswählen..</p></b>
+                            <div class="black-text">
+                                <table>
+                                    <tr>
+                                        <th class="center">Farbe</th>
+                                        <th class="center">Themes</th>
+                                        <th class="center"></th>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <a href="" class="tooltipped" data-position="bottom" data-tooltip="dunkel">
+                                                <div style="width: 40px; height: 40px; background-color: #263238"></div>
+                                            </a>
+                                        </td>
+                                        <td class="center"><b>dark-mode</b></td>
+                                        <td class="center"><a class="navButtonX black" href="">auswählen..</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <a href="" class="tooltipped" data-position="bottom" data-tooltip="hell">
+                                                <div style="width: 40px; height: 40px; background-color: #eceff1"></div>
+                                            </a>
+                                        </td>
+                                        <td class="center"><b>light-mode</b></td>
+                                        <td class="center"><a class="navButtonX black" href="">auswählen..</a></td>
+                                    </tr>
+                                </table>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal center" id="favoritesModal" style="padding: 30px">
+                        <div class="col l12 container">
+                            <b><p class="black-text">Favoriten</p></b>
+                            <div class="black-text">
+                                <table>
+                                    <tr>
+                                        <th class="center"></th>
+                                        <th class="center">Name</th>
+                                        <th class="center">Benutzer Code</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <a href="" class="tooltipped" data-position="bottom" data-tooltip="Profil anzeigen">
+                                                <img style="margin-top:20px " src="images/profile_picture.jpg" width="60px" height="60px">
+                                            </a>
+                                        </td>
+                                        <td class="center">
+                                            <a href="" class="tooltipped" data-position="bottom" data-tooltip="Zum Chat">
+                                                <p class="black-text">
+                                                    <b>Testvorname Testnachname</b>
+                                                </p>
+                                            </a>
+                                        </td>
+                                        <td class="center"><b>#12321</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">
+                                            <a href="" class="tooltipped" data-position="bottom" data-tooltip="Profil anzeigen">
+                                                <img style="margin-top:20px " src="images/profile_picture.jpg" width="60px" height="60px">
+                                            </a>
+                                        </td>
+                                        <td class="center">
+                                            <a href="" class="tooltipped" data-position="bottom" data-tooltip="Zum Chat">
+                                                <p class="black-text">
+                                                    <b>Testvorname Testnachname</b>
+                                                </p>
+                                            </a>
+                                        </td>
+                                        <td class="center"><b>#12321</b></td>
+                                    </tr>
+                                </table>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal center" id="profileModal" style="padding: 30px">
+                        <div class="col l12 container">
+                            <div class="center">
+                                <b><p class="black-text">Eigene Daten</p></b>
+                                <img style="margin-top:20px " src="images/profile_picture.jpg" width="100px" height="100px">
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="userName" type="text" class="validate">
+                                <label for="userName">Benutzername</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="firstName" type="text" class="validate">
+                                <label for="firstName">Vorname</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="lastName" type="text" class="validate">
+                                <label for="lastName">Nachname</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="mail" type="text" class="validate">
+                                <label for="mail">E-Mail</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <a class="navButtonX green" href="">Speichern</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -123,6 +253,7 @@
         $('.dropdown-trigger').dropdown();
         $('.sidenav').sidenav();
         $('.modal').modal();
+        $('.tooltipped').tooltip();
     });
 </script>
 </html>
