@@ -20,9 +20,9 @@ class Sanitize
 
     /**
      * @param string $input
-     * @return string
+     * @return String
      */
-    public function sanitize(string $input) {
+    public function sanitize(string $input) : String {
         $cleanedOutput = (string) strip_tags($input);
         $cleanedOutput = (string) filter_var(
             $cleanedOutput,
@@ -32,77 +32,77 @@ class Sanitize
         return $cleanedOutput;
     }
 
+
     /**
      * @param string $mail
-     * @return string
+     * @return String
      */
-    public function sanitizeMail(string $mail) {
+    public function sanitizeMail(string $mail) : String {
         $cleanedMail = (string) filter_var($mail, FILTER_SANITIZE_EMAIL);
         if (!filter_var($mail, FILTER_VALIDATE_EMAIL) === false) {
-            echo("{$cleanedMail} is valid");
         } else {
-            echo("{$cleanedMail} is not valid");
             $cleanedMail = "";
         }
         return $cleanedMail;
     }
 
+
     /**
      * @param string $url
-     * @return string
+     * @return String
      */
-    public function sanitizeUrl(string $url) {
+    public function sanitizeUrl(string $url) : String {
         $cleanedUrl = (string)filter_var($url, FILTER_SANITIZE_URL);
         if (!filter_var($url, FILTER_VALIDATE_URL) === false) {
-            echo("{$cleanedUrl} is valid");
         } else {
-            echo("{$cleanedUrl} is not valid");
             $cleanedUrl = "";
         }
         return $cleanedUrl;
     }
+
 
     /**
      * @param string $url
-     * @return string
+     * @return String
      */
-    public function sanitizeUrlPlusQuery(string $url) {
+    public function sanitizeUrlPlusQuery(string $url) : String {
         $cleanedUrl = (string)filter_var($url, FILTER_SANITIZE_URL);
         if (!filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_QUERY_REQUIRED) === false) {
-            echo("{$cleanedUrl} is valid");
+            var_dump("{$cleanedUrl} is valid");
         } else {
-            echo("{$cleanedUrl} is not valid");
+            var_dump("{$cleanedUrl} is not valid");
             $cleanedUrl = "";
         }
         return $cleanedUrl;
     }
 
+
     /**
-     * @param $sql
-     * @return string
+     * @param $connection
+     * @param string $sql
+     * @return String
      */
-    public function sanitizeSql($connection, string $sql) {
+    public function sanitizeSql($connection, string $sql) : String {
         $cleanedSql = mysqli_real_escape_string($connection, $sql);
-        return $cleanedSql;
+        return (String)$cleanedSql;
     }
 
-    public function sanitizeInt(int $int) {
+    public function sanitizeInt(int $int) : Int {
         $cleanedInt = filter_var($int, FILTER_SANITIZE_NUMBER_INT);
         if (filter_var($int, FILTER_VALIDATE_INT) === 0 ||
             !filter_var($int, FILTER_VALIDATE_INT) === false) {
-            echo("{$cleanedInt} is valid");
         } else {
-            echo("{$cleanedInt} is not valid");
             $cleanedInt = 0;
         }
         return $cleanedInt;
     }
 
+
     /**
      * @param string $string
-     * @return string
+     * @return String
      */
-    public function sanitizeString(string $string) {
+    public function sanitizeString(string $string) : String {
         $cleanedString = (string) strip_tags($string);
         $cleanedString = (string) filter_var(
             $cleanedString,
@@ -121,7 +121,7 @@ class Sanitize
      * @param $boolean
      * @return mixed
      */
-    public function sanitizeBoolean($boolean) {
+    public function sanitizeBoolean($boolean) : bool {
         $cleanedBoolean = $boolean;
         return $cleanedBoolean;
     }
@@ -153,11 +153,12 @@ class Sanitize
         return $cleanedGet;
     }
 
+
     /**
      * @param string $html
-     * @return string
+     * @return String
      */
-    public function sanitizeHTML(string $html) {
+    public function sanitizeHTML(string $html) : String {
         $cleanedHtml = $html;
         return $cleanedHtml;
     }
