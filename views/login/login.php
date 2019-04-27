@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../../assets/styles/materialize/css/materialize.css">
     <link rel="stylesheet" href="../../assets/styles/custom/css/menu.css">
     <script src="../../assets/styles/materialize/js/materialize.js"></script>
-    <script src="../../js/createUser.js"></script>
 </head>
 <body>
 <header>

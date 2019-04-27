@@ -33,4 +33,22 @@ class UserMapper
 
         $database->execute($sql);
     }
+
+    /**
+     * @param int $userId
+     * @return array
+     */
+    public function getUser(int $userId) {
+        $database = new Database();
+        $constants = new Constants();
+
+        $constants->init();
+        $database->buildConnection();
+
+        $fields = " user_id, user_passwort, vorname, nachname, telefon, user_email, session, profile_picture, status," .
+                  " aktiv, admin, member ";
+        $sql = "SELECT {$fields} FROM user_data WHERE user_id = {$userId}";
+        $userModel = $database->selectToArray($sql);
+        return $userModel;
+    }
 }

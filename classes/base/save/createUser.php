@@ -5,12 +5,12 @@
  * Date: 24.04.2019
  * Time: 17:14
  */
-
 /**
  * Initializing Classes and requirements
  */
 
 require_once("../../../Include.php");
+
 $sanitize = new \classes\base\validation\Sanitize();
 $encryption = new \classes\base\validation\Encryption();
 $userModel = new \classes\user\User();
