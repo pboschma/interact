@@ -25,13 +25,13 @@
         <div class="card-content" style="padding: 50px">
             <h4>Login</h4>
             <br>
-            <form>
+            <form method="post" id="loginForm" action="../../classes/base/login/Login.php">
                 <div class="row">
                     <div class="input-field">
-                        <input placeholder="Benutzername" id="first_name" type="text" class="validate" required>
+                        <input placeholder="Benutzername" id="userName" type="text" class="validate" required>
                     </div>
                     <div class="input-field">
-                        <input placeholder="Passwort" id="first_name" type="password" class="validate" required>
+                        <input placeholder="Passwort" id="password" type="password" class="validate" required>
                     </div>
                 </div>
             </form>
