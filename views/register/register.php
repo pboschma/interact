@@ -26,23 +26,25 @@
         <div class="card-content" style="padding: 50px">
             <h4>Registrierung</h4>
             <br>
-            <form method="post" id="registerForm" action="../../classes/base/save/createUser.php">
+            <form method="post" id="registerForm" action="../../classes/base/save/CreateUser.php">
                 <div class="row">
                     <div class="input-field">
-                        <input name="mail" placeholder="E-Mail" id="first_name" type="email" class="validate" required>
+                        <input name="mail" placeholder="E-Mail" id="mail" type="email" class="validate" required>
                     </div>
                     <div class="input-field">
                         <input name="username" placeholder="Benutzername" id="first_name" type="text" class="validate" required>
                     </div>
                     <div class="input-field">
-                        <input name="password" placeholder="Passwort" id="first_name" type="password" class="validate" required>
+                        <input name="password" placeholder="Passwort" id="password" type="password" class="validate" required>
                     </div>
                     <div class="input-field">
                         <input name="passwordRepeat" placeholder="Passwort wiederholen" id="first_name" type="password" class="validate" required>
                     </div>
+                    <div class="input-field">
+                        <input name="registerId" value="register" id="registerId" type="hidden">
+                    </div>
                 </div>
                 <div class="right row s12 m12" style="margin-bottom:100px;">
-
                     <div class="col s12 m5" style="margin-bottom: 20px">
                         <div class="col s12 m12" style="margin-bottom: 20px">
                             <input name="register" type="submit" class="btn green" value="Registrieren">
