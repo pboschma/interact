@@ -60,9 +60,13 @@ if ((String)$userModel->getUsername() === "") {
     $error['username'] = "Bitte geben Sie einen gültigen Benutzernamen ein!";
     $errorCount++;
 }
+
 if((int)$errorCount === 0) {
+    $userModel->setActive(1);
     $blankPassword = $userModel->getPassword();
     $encryptedPassword = $encryption->encrypt($blankPassword);
     $userModel->setPassword($encryptedPassword);
     $userMapper->create($userModel);
 }
+
+echo $userModel->getActive();

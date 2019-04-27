@@ -17,6 +17,8 @@ class User
 
     protected $passwordRepeat;
 
+    protected $active;
+
 
     /**
      * @return String
@@ -86,5 +88,21 @@ class User
     public function setPasswordRepeat(string $passwordRepeat)
     {
         $this->passwordRepeat = $passwordRepeat;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getActive() : Int
+    {
+        return $this->active;
+    }
+
+    /**
+     * @param mixed $active
+     */
+    public function setActive(int $active)
+    {
+        $this->active = $active;
     }
 }

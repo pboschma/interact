@@ -4,13 +4,15 @@ $(document).ready(function()
     $(form).submit(function(event) {
         event.preventDefault();
         var formData = $(form).serialize();
-        console.log(formData);
         $.ajax({
             type: 'POST',
             url: $(form).attr('action'),
-            data: formData
+            data: formData,
+            success: function(data) {
+                window.top.location.href="../../views/login/login.php";
+            }
         }).done(function(data) {
-            console.log('done: '+data);
+            console.log("done " . data);
         }).fail(function(data) {
             console.log('fail: '+data);
         });
