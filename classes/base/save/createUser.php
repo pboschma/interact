@@ -15,16 +15,20 @@ $sanitize = new base\validation\Sanitize();
 $encryption = new base\validation\Encryption();
 $userModel = new user\User();
 $userMapper = new user\mapper\UserMapper();
-$error = [];
-$errorCount = 0;
+$base = new base\Base;
 
 /**
  * Parsing data to Model
  */
 
-if (isset($_REQUEST['username']) && !is_null($_REQUEST['username'])) {
-    $cleanedUserName = $sanitize->sanitizeString($_REQUEST['username']);
-    $userModel->setUsername($cleanedUserName);
+if (isset($_REQUEST['first_name']) && !is_null($_REQUEST['first_name'])) {
+    $cleanedUserName = $sanitize->sanitizeString($_REQUEST['first_name']);
+    $userModel->setVorname($cleanedUserName);
+}
+
+if (isset($_REQUEST['last_name']) && !is_null($_REQUEST['last_name'])) {
+    $cleanedLastName = $sanitize->sanitizeString($_REQUEST['last_name']);
+    $userModel->setNachname($cleanedLastName);
 }
 
 if (isset($_REQUEST['password']) && !is_null($_REQUEST['password'])) {
@@ -47,26 +51,55 @@ if (isset($_REQUEST['mail']) && !is_null($_REQUEST['mail'])) {
  */
 
 if ($userModel->getPasswordRepeat() !== $userModel->getPassword()) {
-    $error['password'] = "Die Passwörter stimmen nicht überein!";
-    $errorCount++;
+    $base::json([
+        'status' => 'error',
+        'content' => 'Die Passwörter stimmen nicht überein!'
+    ]);
 }
 
 if ((String)$userModel->getMail() === "") {
-    $error['mail'] = "Bitte geben Sie eine gültige E-Mail Adresse ein!";
-    $errorCount++;
+    $base::json([
+        'status' => 'error',
+        'content' => 'Bitte geben Sie eine gültige E-Mail Adresse ein!'
+    ]);
 }
 
-if ((String)$userModel->getUsername() === "") {
-    $error['username'] = "Bitte geben Sie einen gültigen Benutzernamen ein!";
-    $errorCount++;
+if ((String)$userModel->getVorname() === "") {
+    $base::json([
+        'status' => 'error',
+        'content' => 'Bitte geben Sie einen gültige Vorname ein!'
+    ]);
+
 }
 
-if((int)$errorCount === 0) {
-    $userModel->setActive(1);
-    $blankPassword = $userModel->getPassword();
-    $encryptedPassword = $encryption->encrypt($blankPassword);
-    $userModel->setPassword($encryptedPassword);
-    $userMapper->create($userModel);
+if ((String)$userModel->getNachname() === "") {
+    $base::json([
+        'status' => 'error',
+        'content' => 'Bitte geben Sie einen gültige Nachname ein!'
+    ]);
+
 }
 
-echo $userModel->getActive();
+$userModel->setActive(1);
+$blankPassword = $userModel->getPassword();
+$encryptedPassword = $encryption->encrypt($blankPassword);
+$userModel->setPassword($encryptedPassword);
+
+$addUser = $userMapper->create($userModel);
+$base::json([
+    'status' => 'error',
+    'error' => $addUser
+]);
+
+if(!$addUser) {
+    $base::json([
+        'status' => 'error',
+        'activeState' => 'Das registrieren ist leider fehlgeschlagen.'
+    ]);
+}
+
+$base::json([
+    'status' => 'success',
+    'activeState' => $userModel->getActive()
+]);
+

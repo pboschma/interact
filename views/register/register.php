@@ -32,13 +32,16 @@
                         <input name="mail" placeholder="E-Mail" id="mail" type="email" class="validate" required>
                     </div>
                     <div class="input-field">
-                        <input name="username" placeholder="Benutzername" id="first_name" type="text" class="validate" required>
+                        <input name="first_name" placeholder="Vorname" id="first_name" type="text" class="validate" required>
+                    </div>
+                    <div class="input-field">
+                        <input name="last_name" placeholder="Nachname" id="last_name" type="text" class="validate" required>
                     </div>
                     <div class="input-field">
                         <input name="password" placeholder="Passwort" id="password" type="password" class="validate" required>
                     </div>
                     <div class="input-field">
-                        <input name="passwordRepeat" placeholder="Passwort wiederholen" id="first_name" type="password" class="validate" required>
+                        <input name="passwordRepeat" placeholder="Passwort wiederholen" id="repeat_password" type="password" class="validate" required>
                     </div>
                     <div class="input-field">
                         <input name="registerId" value="register" id="registerId" type="hidden">

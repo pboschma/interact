@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Jan-Lukas
- * Date: 04.04.2019
- * Time: 21:16
- */
 
 namespace user\mapper;
 
@@ -13,10 +7,6 @@ use database\Database;
 
 class UserMapper
 {
-    /**
-     * Creating new user on registration
-     * @param $userModel
-     */
     public function create($userModel) {
         $database = new Database();
         $constants = new Constants();
@@ -24,20 +14,21 @@ class UserMapper
         $constants->init();
         $database->buildConnection();
 
-        $username = $userModel->getUsername();
+        $vorname = $userModel->getVorname();
+        $nachname = $userModel->getNachname();
         $password = $userModel->getPassword();
         $mail = $userModel->getMail();
 
-        $sql = "INSERT INTO user_login (username, mail, password)" .
-               " VALUES ({$username}, {$mail}, {$password})";
+        $sql = "INSERT INTO tbl_user (vorname, nachname, user_email, user_passwort)" .
+               " VALUES ({$vorname}, {$nachname}, {$mail}, {$password})";
 
-        $database->execute($sql);
+        if(!$database->execute($sql)){
+            return false;
+        }
+
+        return true;
     }
 
-    /**
-     * @param int $userId
-     * @return array
-     */
     public function getUser(int $userId) {
         $database = new Database();
         $constants = new Constants();

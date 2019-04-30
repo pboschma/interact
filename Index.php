@@ -1,5 +1,4 @@
 <?php
-// require_once('Include.php');
 require_once('_autoloader.php');
 
 use database\Database;
@@ -15,5 +14,6 @@ $database->buildConnection();
 
 $sql = "SELECT vorname, user_id FROM tbl_user";
 $test = $database->selectScalar($sql);
-var_dump($test);
+
+
 
