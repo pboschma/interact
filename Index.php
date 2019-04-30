@@ -1,4 +1,6 @@
-<script src="js/index.js"></script>
+<script>
+    window.top.location.href="views/login/login.php";
+</script>
 <?php
 require_once('_autoloader.php');
 
