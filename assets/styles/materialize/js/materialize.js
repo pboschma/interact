@@ -1161,7 +1161,7 @@ M.initializeJqueryWrapper = function (plugin, pluginName, classRef) {
 
 /**
  * Automatically initialize components
- * @param {Element} context  DOM Element to search within for components
+ * @param {Element} context  DOM Element to user_search within for components
  */
 M.AutoInit = function (context) {
   // Use document.body if no context is given
@@ -2504,7 +2504,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
           // ENTER selects choice on focused item
         } else if (e.which === M.keys.ENTER && this.isOpen) {
-          // Search for <a> and <button>
+          // user_search for <a> and <button>
           var focusedElement = this.dropdownEl.children[this.focusedIndex];
           var $activatableElement = $(focusedElement).find('a, button').first();
 
@@ -6915,7 +6915,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 ;(function ($) {
   // Function to update labels of text fields
   M.updateTextFields = function () {
-    var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=time], textarea';
+    var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=user_search], input[type=date], input[type=time], textarea';
     $(input_selector).each(function (element, index) {
       var $this = $(this);
       if (element.value.length > 0 || $(element).is(':focus') || element.autofocus || $this.attr('placeholder') !== null) {
@@ -7044,7 +7044,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
   $(document).ready(function () {
     // Text based inputs
-    var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=time], textarea';
+    var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=user_search], input[type=date], input[type=time], textarea';
 
     // Add active if form auto complete
     $(document).on('change', input_selector, function () {

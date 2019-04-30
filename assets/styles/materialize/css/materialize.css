@@ -6618,7 +6618,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
   }
 }
 
-/* Search Field */
+/* search Field */
 .input-field input[type=search] {
   display: block;
   line-height: inherit;

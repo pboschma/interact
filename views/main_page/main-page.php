@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/styles/materialize/css/materialize.css">
     <script src="assets/styles/materialize/js/materialize.js"></script>
     <link rel="stylesheet" href="assets/styles/custom/css/menu.css">
+    <script src="../../js/login.js"></script>
 </head>
 <body>
 <!-- NAVBAR -->
