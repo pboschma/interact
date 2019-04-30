@@ -5,9 +5,9 @@
  * Date: 19.03.2019
  * Time: 14:34
  */
-namespace classes\database;
+namespace database;
 
-use classes\base\validation\Sanitize;
+use base\validation\Sanitize;
 
 class Database
 {
@@ -23,8 +23,6 @@ class Database
         if (!$connection) {
             die("Connection failed: " . mysqli_connect_error());
         }
-
-        echo "Connected successfully";
 
         $this->setConnection($connection);
     }

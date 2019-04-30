@@ -5,7 +5,7 @@
  * Date: 04.04.2019
  * Time: 21:05
  */
-namespace classes\user\service;
+namespace user\service;
 
 class UserService
 {

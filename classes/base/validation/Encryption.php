@@ -6,7 +6,7 @@
  * Time: 23:58
  */
 
-namespace classes\base\validation;
+namespace base\validation;
 
 
 class Encryption

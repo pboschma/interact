@@ -1,9 +1,9 @@
 <?php
-//replacement for autoloader because I don't know how to build one just yet :(
-require_once('Include.php');
+// require_once('Include.php');
+require_once('_autoloader.php');
 
-use \classes\database\Database;
-use \assets\constants\Constants;
+use database\Database;
+use constants\Constants;
 
 //declaring objects for initialization
 $database = new Database();

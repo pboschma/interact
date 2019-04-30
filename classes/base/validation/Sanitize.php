@@ -6,10 +6,8 @@
  * Time: 21:11
  */
 
-namespace classes\base\validation;
-
-
-use classes\database\Database;
+namespace base\validation;
+use database\Database;
 
 class Sanitize
 {

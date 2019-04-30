@@ -6,7 +6,7 @@
  * Time: 00:56
  */
 
-namespace classes\base\validation;
+namespace base\validation;
 
 
 class Errorhandling
