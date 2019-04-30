@@ -1,3 +1,4 @@
+<script src="js/index.js"></script>
 <?php
 require_once('_autoloader.php');
 
@@ -11,9 +12,6 @@ $constants = new Constants();
 //bootstrap
 $constants->init();
 $database->buildConnection();
-
-$sql = "SELECT vorname, user_id FROM tbl_user";
-$test = $database->selectScalar($sql);
 
 
 
