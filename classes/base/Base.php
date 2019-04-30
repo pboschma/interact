@@ -6,7 +6,7 @@
  * Time: 22:40
  */
 
-namespace classes\base;
+namespace base;
 
 
 class Base

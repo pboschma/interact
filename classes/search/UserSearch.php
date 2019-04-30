@@ -1,12 +1,12 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Jan-Lukas Müller
+ * user: Jan-Lukas Müller
  * Date: 19.03.2019
- * Time: 14:45
+ * Time: 14:29
  */
 
-class register
+class UserSearch
 {
 
 }

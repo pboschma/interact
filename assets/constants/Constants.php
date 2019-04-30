@@ -6,9 +6,9 @@
  * Time: 20:51
  */
 
-namespace assets\constants;
+namespace constants;
 
-use classes\database\DatabaseConfig;
+use database\DatabaseConfig;
 
 class Constants
 {

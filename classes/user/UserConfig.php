@@ -5,7 +5,7 @@
  * Date: 04.04.2019
  * Time: 21:04
  */
-namespace classes\user;
+namespace user;
 
 class UserConfig
 {

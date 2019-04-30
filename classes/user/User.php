@@ -5,7 +5,7 @@
  * Date: 19.03.2019
  * Time: 14:41
  */
-namespace classes\user;
+namespace user;
 
 class User
 {

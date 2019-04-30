@@ -9,12 +9,12 @@
  * Initializing Classes and requirements
  */
 
-require_once("../../../Include.php");
+require_once('../../../_autoloader.php');
 
-$sanitize = new \classes\base\validation\Sanitize();
-$encryption = new \classes\base\validation\Encryption();
-$userModel = new \classes\user\User();
-$userMapper = new \classes\user\mapper\UserMapper();
+$sanitize = new base\validation\Sanitize();
+$encryption = new base\validation\Encryption();
+$userModel = new user\User();
+$userMapper = new user\mapper\UserMapper();
 $error = [];
 $errorCount = 0;
 

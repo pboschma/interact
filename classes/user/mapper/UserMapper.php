@@ -6,10 +6,10 @@
  * Time: 21:16
  */
 
-namespace classes\user\mapper;
+namespace user\mapper;
 
-use assets\constants\Constants;
-use classes\database\Database;
+use constants\Constants;
+use database\Database;
 
 class UserMapper
 {

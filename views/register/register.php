@@ -26,7 +26,7 @@
         <div class="card-content" style="padding: 50px">
             <h4>Registrierung</h4>
             <br>
-            <form method="post" id="registerForm" action="../../classes/base/save/CreateUser.php">
+            <form method="post" id="registerForm" action="../../classes/base/save/createUser.php">
                 <div class="row">
                     <div class="input-field">
                         <input name="mail" placeholder="E-Mail" id="mail" type="email" class="validate" required>
