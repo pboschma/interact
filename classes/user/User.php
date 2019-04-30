@@ -13,6 +13,10 @@ class User
 
     protected $username;
 
+    protected $vorname;
+
+    protected $nachname;
+
     protected $password;
 
     protected $passwordRepeat;
@@ -37,6 +41,39 @@ class User
         $this->username = $username;
     }
 
+    /**
+     * @return String
+     */
+    public function getVorname() : String
+    {
+        return $this->vorname;
+    }
+
+
+    /**
+     * @param String $vorname
+     */
+    public function setVorname(String $vorname)
+    {
+        $this->vorname = $vorname;
+    }
+
+    /**
+     * @return String
+     */
+    public function getNachname() : String
+    {
+        return $this->nachname;
+    }
+
+
+    /**
+     * @param String $nachname
+     */
+    public function setNachname(String $nachname)
+    {
+        $this->nachname = $nachname;
+    }
 
     /**
      * @return String
