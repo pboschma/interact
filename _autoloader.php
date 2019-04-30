@@ -1,7 +1,8 @@
 <?php
 define("DS", DIRECTORY_SEPARATOR);
-define("ROOT", dirname(__DIR__) . DS . 'public_html');
-
+define("LOCAL_PATH", "");
+define("ROOT", dirname(__DIR__) . DS . LOCAL_PATH);
+define("LOCAL", 1);
 
 
 spl_autoload_register(function($sClassPath)
